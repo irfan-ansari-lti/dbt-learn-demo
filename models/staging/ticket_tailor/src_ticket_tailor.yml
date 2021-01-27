@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: ticket_tailor
+    database: raw
+    tables:
+      - name: events
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: issued_tickets
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: object
+            tests:
+              - accepted_values:
+                  values: ['order']
