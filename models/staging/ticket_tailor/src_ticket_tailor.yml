@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: ticket_tailor
+    database: raw
+    loaded_at_field: _SDC_RECEIVED_AT
+    freshness:
+        warn_after:
+            count: 14
+            period: day
+    tables:
+      - name: orders
+        columns:
+          - name: id
+            tests:
+            - unique
+            - not_null
+
+      - name: issued_tickets
+      - name: events

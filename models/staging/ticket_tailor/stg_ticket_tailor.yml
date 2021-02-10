@@ -1,0 +1,8 @@
+version: 2
+models:
+- name: stg_ticket_tailor__orders
+  columns:
+  - name: currency_code
+    tests:
+      - accepted_values:
+          values: ['usd']
