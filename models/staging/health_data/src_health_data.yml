@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: health_data
+    description: A bunch of fake, random health data for practice.
+    database: raw
+    schema: health_data
+    tables:
+      - name: labs
+      - name: concept
+      - name: patientclean
+      - name: provclean
+      - name: condition_occurrence
