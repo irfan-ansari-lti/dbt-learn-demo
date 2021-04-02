@@ -23,7 +23,7 @@ cleaned as (
         max_norm,
 
         -- timestamps
-        test_date at test_at,
+        test_date as test_at,
         transaction_timestamp as transaction_at
 
     from source

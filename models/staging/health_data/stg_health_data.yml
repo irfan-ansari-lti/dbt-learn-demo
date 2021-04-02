@@ -1,0 +1,38 @@
+version: 2
+
+models: 
+
+  - name: stg_concepts
+    description: The concepts.
+    columns:
+      - name: concept_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_condition_occurrence
+    description: The condition occurrences.
+    columns:
+      - name: condition_occurrence_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_labs
+    description: All lab results to data.
+    
+  - name: stg_patient_clean
+    description: Patient data with all PHI removed.
+    columns:
+      - name: patient_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_provider_clean
+    description: Anonymized provider data.
+    columns:
+      - name: provider_id
+        tests:
+          - unique
+          - not_null
