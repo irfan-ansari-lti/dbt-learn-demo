@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: lab_measurements
+    description: one row per lab measurement
+    columns:
+      - name: lab_measurement_id
+        tests:
+          - not_null
+          - unique
+      - name: concept_id
+      - name: test_at
+        tests:
+          - not_null
+      - name: person_id
+        tests:
+          - not_null
+      - name: lab
+        description: lab field from concepts table

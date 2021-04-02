@@ -11,8 +11,8 @@ cleaned as (
     select
 
         -- ids
-        concept_id,
-        domain_id
+        IFNULL(concept_id, 0) as concept_id,
+        domain_id,
 
         -- description
         concept_code,

@@ -21,6 +21,7 @@ cleaned as (
         test_units,
         min_norm,
         max_norm,
+        'Panel: ' || IFNULL(panel, '') || ' | Test: ' || IFNULL(test, '') || ' | Loinc: ' || IFNULL(loinc, '') lab,
 
         -- timestamps
         test_date as test_at,

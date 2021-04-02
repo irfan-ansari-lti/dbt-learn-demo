@@ -13,7 +13,7 @@ cleaned as (
         -- ids
         patient_id,
         person_id,
-        provider_id
+        provider_id 
 
     from source
 
