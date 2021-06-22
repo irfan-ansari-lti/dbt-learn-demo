@@ -1,17 +1,17 @@
 version: 2
 
 sources:
-  - name: jaffle_shop
+  - name: jaffle_demo_dbt
     description: A replica of the postgres database
-    database: raw
+    database: dataops_dev
     tables:
-      - name: customers
+      - name: raw_customers
         columns:
           - name: id
             tests:
               - not_null
               - unique
-      - name: orders
+      - name: raw_orders
         description: One record per order
         loaded_at_field: _etl_loaded_at
         freshness:
